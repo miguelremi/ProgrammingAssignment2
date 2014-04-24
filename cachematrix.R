@@ -1,5 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions are used to cache inverse matrix calculations.
+ # Calculating the inverse matrix with solve is a very time-consuming operation.
+ # Existence of the inverse of a matrix is assumed.
 
 ## Return matrix object wrapper that supports inverse matrix cache.
 makeCacheMatrix <- function(x = matrix()) {
@@ -17,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Cache inverse matrix
+## Cache inverse matrix in case it is not already calculated and return cached value.
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
         i <- x$getinverse()
